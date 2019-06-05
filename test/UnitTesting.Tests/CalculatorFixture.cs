@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using UnitTesting.Api;
 
 namespace UnitTesting.Tests
@@ -82,6 +83,24 @@ namespace UnitTesting.Tests
             //arrange
             int value1 = 6;
             int value2 = 2;
+            int expected = 3;
+
+            //act
+
+
+            int actual = SystemUnderTest.Divide(value1, value2);
+
+            //assert
+            Assert.AreEqual<int>(expected, actual, "Wrong result");
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void DivideByZeroThrowsException()
+        {
+            //arrange
+            int value1 = 6;
+            int value2 = 0;
             int expected = 3;
 
             //act
