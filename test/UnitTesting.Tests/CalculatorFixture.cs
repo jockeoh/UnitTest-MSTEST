@@ -58,5 +58,40 @@ namespace UnitTesting.Tests
             //assert
             Assert.AreEqual<int>(expected, actual, "Wrong result");
         }
+
+        [TestMethod]
+        public void Multiply()
+        {
+            //arrange
+            int value1 = 6;
+            int value2 = 2;
+            int expected = 12;
+
+            //act
+
+
+            int actual = SystemUnderTest.Multiply(value1, value2);
+
+            //assert
+            Assert.AreEqual<int>(expected, actual, "Wrong result");
+        }
+
+        [TestMethod]
+        public void Divide()
+        {
+            //arrange
+            int value1 = 6;
+            int value2 = 2;
+            int expected = 3;
+
+            //act
+
+
+            int actual = SystemUnderTest.Divide(value1, value2);
+
+            //assert
+            Assert.AreEqual<int>(expected, actual, "Wrong result");
+        }
+
     }
 }
