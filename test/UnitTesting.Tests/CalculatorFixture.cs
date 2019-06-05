@@ -23,5 +23,23 @@ namespace UnitTesting.Tests
             //assert
             Assert.AreEqual<int>(expected, actual, "Wrong result");
         }
+
+        [TestMethod]
+        public void Subtract()
+        {
+            //arrange
+            int value1 = 6;
+            int value2 = 2;
+            int expected = 4;
+
+            //act
+
+            var sut = new Calculator();
+
+            int actual = sut.Subtract(value1, value2);
+
+            //assert
+            Assert.AreEqual<int>(expected, actual, "Wrong result");
+        }
     }
 }
